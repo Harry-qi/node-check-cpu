@@ -1,0 +1,14 @@
+{
+  "name": "node-os",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "current-processes": "^0.2.1",
+    "lodash.sortby": "^4.7.0",
+    "nodemailer": "^6.5.0"
+  }
+}
