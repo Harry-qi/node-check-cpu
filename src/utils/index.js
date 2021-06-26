@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
-const config = require('./config')
+const os = require('os');
+const config = require('../config')
 var ps = require('current-processes');
 const sortby = require('lodash.sortby')
 // 发送邮件
@@ -84,10 +85,16 @@ function createHTML(){
   })
 
 }
+// cpu已经使用了多少
+const hasUse = ( (os.totalmem()-  os.freemem()) / os.totalmem() ) * 100  
+// cpu使用百分比
+const usePercentage = (hasUse).toFixed(2) + '%' 
 module.exports = {
   sendEmail,
   parseTime,
-  createHTML
+  createHTML,
+  usePercentage,
+  hasUse
 }
 
 

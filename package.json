@@ -1,14 +1,23 @@
 {
   "name": "node-os",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "keywords": [],
-  "author": "",
+  "author": "Harry-qi",
   "license": "ISC",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
   "dependencies": {
     "current-processes": "^0.2.1",
     "lodash.sortby": "^4.7.0",
     "nodemailer": "^6.5.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "nodemon": "^2.0.7"
   }
 }

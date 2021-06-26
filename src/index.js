@@ -1,10 +1,9 @@
-const os = require('os');
+
 const fs = require('fs')
-const { sendEmail, parseTime, createHTML } = require('./utils')
+const { sendEmail, parseTime, createHTML, hasUse, usePercentage } = require('./utils')
 const config = require('./config')
 
-let hasUse = ( (os.totalmem()-  os.freemem()) / os.totalmem() ) * 100  // cpu已经使用了多少
-const usePercentage = (hasUse).toFixed(2) + '%' // 转化为百分比
+
 async function init(){
   // 超过设定就发送邮件
   if( hasUse>=config.cpuMaxUse ){
